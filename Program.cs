@@ -1,4 +1,4 @@
-﻿var coll = "LAB_PR_COV.csv"
+﻿/*var coll = "LAB_PR_COV.csv"
     .Open()
     .Skip(1)
     .Take(1000)
@@ -99,5 +99,50 @@ public static class MyExtensionMethods // Metodo de Extensão é voce colocar um
         }
 
         stream.Close();
+    }
+}
+*/
+
+/*
+int[] Lista = new int[]
+{1,2,3,3,3,4,5,6,7};
+
+bool filtro(int i) => i == 3;
+
+public static class Batata
+{
+public static IEnumerable<T> Where<T>(this IEnumerable<T> coll, Func<T, bool> condition)
+{
+    var it = coll.GetEnumerator();
+    while (it.MoveNext())
+    {
+        if (condition(it.Current))
+            yield return it.Current;
+    }       
+        //yield; // pia ele retorna uma coleção, ele retorna um elemento e pausa o código.
+}
+}
+*/
+
+int[] Lista = new int[]
+{1,2,3,3,3,4,5,6,1,2};
+
+for(int i = 0; i < Lista.Length; i++)
+{
+    if (Lista[i++] > Lista[i])
+    {
+        int maior = Lista[i++];
+    }
+}
+
+public static class maior
+{
+    public static int Max<T>(this IEnumerable<T> coll, Func<T, int> Func)
+    {
+        var it = coll.GetEnumerator();
+        while (it.MoveNext())
+        {
+            if ()
+        }
     }
 }
